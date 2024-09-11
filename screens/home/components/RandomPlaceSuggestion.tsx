@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
-import { markAsVisited, unmarkAsVisited } from "../../../store/placesSlice"; // Adjust path as needed
+import { markAsVisited, unmarkAsVisited } from "../../../store/placesSlice"; 
 import PlaceItem from "./PlaceItem";
-import { RootState } from "../../../store/store"; // Adjust the path to your store
+import { RootState } from "../../../store/store"; 
 
 interface Place {
   id: number;
@@ -14,7 +14,6 @@ interface Place {
 }
 
 const RandomPlaceSuggestion: React.FC = () => {
-  // Typing the selector for accessing the places from Redux store
   const places = useSelector((state: RootState) => state.places.places);
   const dispatch = useDispatch();
 
@@ -36,7 +35,6 @@ const RandomPlaceSuggestion: React.FC = () => {
     }
   };
 
-  // Find the selected random place from the Redux store
   const randomPlace = randomPlaceId
     ? places.find((place: Place) => place.id === randomPlaceId)
     : null;
@@ -57,7 +55,7 @@ const RandomPlaceSuggestion: React.FC = () => {
   );
 };
 
-// Styles for the component
+
 const styles = StyleSheet.create({
   container: {
     padding: 0,

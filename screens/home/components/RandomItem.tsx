@@ -1,19 +1,16 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
-// Define TypeScript interface for the place prop
 interface Place {
   name: string;
   image: string;
   description: string;
 }
 
-// Define TypeScript props for the RandomItem component
 interface RandomItemProps {
   place: Place;
 }
 
-// Convert component to React Native with TypeScript
 const RandomItem: React.FC<RandomItemProps> = ({ place }) => {
   return (
     <View style={styles.container}>
@@ -28,7 +25,6 @@ const RandomItem: React.FC<RandomItemProps> = ({ place }) => {
   );
 };
 
-// Styles for the component
 const styles = StyleSheet.create({
   container: {
     padding: 0,
@@ -38,8 +34,8 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     overflow: 'hidden',
     backgroundColor: '#fff',
-    elevation: 3, // For shadow effect on Android
-    shadowColor: '#000', // For shadow effect on iOS
+    elevation: 3, 
+    shadowColor: '#000', 
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 5,

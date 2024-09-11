@@ -58,12 +58,6 @@ const placesSlice = createSlice({
   name: "places",
   initialState,
   reducers: {
-    // toggleVisited: (state, action) => {
-    //   const place = state.places.find((place) => place.id === action.payload);
-    //   if (place) {
-    //     place.visited = !place.visited;
-    //   }
-    // },
     markAsVisited: (state, action) => {
       const place = state.places.find((place) => place.id === action.payload);
       if (place) place.visited = true;

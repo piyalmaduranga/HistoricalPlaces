@@ -1,14 +1,11 @@
-// screens/PlaceDetails.tsx
-
 import React from 'react';
 import { View, Text, Button, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigation, useRoute } from '@react-navigation/native';
+import { useRoute } from '@react-navigation/native';
 import { RootState } from '../../../store/store'; // Adjust the import path
 import { markAsVisited, unmarkAsVisited } from '../../../store/placesSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faMapMarkerAlt, faMapMarker } from "@fortawesome/free-solid-svg-icons";
-//import { FontAwesomeIcon } from 'react-native-vector-icons/FontAwesome';
 
 interface RouteParams {
   id: string;

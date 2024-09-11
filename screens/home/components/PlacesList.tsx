@@ -8,8 +8,6 @@ import { RootState } from '../../../store/store'; // Adjust path as needed
 
 const PlacesList: React.FC = () => {
   const dispatch = useDispatch();
-  
-  // Using RootState to infer the correct type from Redux store
   const places = useSelector((state: RootState) => state.places.places);
 
   const toggleVisitedStatus = (id: number, visited: boolean) => {

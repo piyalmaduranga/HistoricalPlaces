@@ -16,10 +16,6 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-// type SectionProps = PropsWithChildren<{
-//   title: string;
-// }>;
-
 
 const Stack = createNativeStackNavigator();
 
@@ -39,12 +35,6 @@ const CustomBackButton = () => {
 };
 
 function App(): React.JSX.Element {
-  //const isDarkMode = useColorScheme() === 'dark';
-
-  // const backgroundStyle = {
-  //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  // };
-
   return (
     <Provider store={store}>
 
@@ -77,23 +67,5 @@ function App(): React.JSX.Element {
   );
 }
 
-// const styles = StyleSheet.create({
-//   sectionContainer: {
-//     marginTop: 32,
-//     paddingHorizontal: 24,
-//   },
-//   sectionTitle: {
-//     fontSize: 24,
-//     fontWeight: '600',
-//   },
-//   sectionDescription: {
-//     marginTop: 8,
-//     fontSize: 18,
-//     fontWeight: '400',
-//   },
-//   highlight: {
-//     fontWeight: '700',
-//   },
-// });
 
 export default App;

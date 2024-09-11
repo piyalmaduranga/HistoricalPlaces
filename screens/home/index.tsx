@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, Text, StyleSheet, FlatList } from 'react-native';// Adjust path as needed
+import { ScrollView, Text, StyleSheet, FlatList } from 'react-native';
 import RandomPlaceSuggestion from '../home/components/RandomPlaceSuggestion';
 import PlacesList from '../home/components/PlacesList';
 
