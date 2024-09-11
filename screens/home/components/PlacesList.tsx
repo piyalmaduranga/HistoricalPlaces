@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, Text, StyleSheet, FlatList } from 'react-native';
+import { Text, FlatList } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { markAsVisited, unmarkAsVisited } from '../../../store/placesSlice'; // Adjust path as needed
 import RandomPlaceSuggestion from './RandomPlaceSuggestion';
@@ -34,33 +34,14 @@ const PlacesList: React.FC = () => {
   };
 
   return (
-    <ScrollView style={styles.container}>
-      <RandomPlaceSuggestion />
-
-      <Text style={styles.heading}>All Historical Places</Text>
-
-      <FlatList
+    <FlatList
         data={places}
         keyExtractor={(item) => item.id.toString()}
         renderItem={renderItem}
         ListEmptyComponent={<Text>No places available.</Text>}
-      />
-    </ScrollView>
+    />
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 10,
-    backgroundColor: '#000',
-  },
-  heading: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color:"#fff",
-    marginBottom: 16,
-  },
-});
 
 export default PlacesList;

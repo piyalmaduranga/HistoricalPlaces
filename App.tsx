@@ -8,7 +8,7 @@
 import React from 'react';
 import { NavigationContainer  } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import PlacesList from './screens/home/components/PlacesList'; // adjust the import path as necessary
+import HomeScreen from './screens/home'; // adjust the import path as necessary
 import PlaceDetails from './screens//home/components/PlaceDetails'; // adjust the import path as necessary
 import { TouchableOpacity, Text, StatusBar } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -50,7 +50,7 @@ function App(): React.JSX.Element {
 
     <NavigationContainer>
       <StatusBar barStyle="light-content" backgroundColor="#000" />
-      <Stack.Navigator initialRouteName="PlacesList" 
+      <Stack.Navigator initialRouteName="HomeScreen" 
         screenOptions={{
           headerStyle: { backgroundColor: '#000' }, // Header background color
           headerTintColor: '#fff', // Header text color
@@ -58,8 +58,8 @@ function App(): React.JSX.Element {
         }}
       >
         <Stack.Screen
-          name="PlacesList"
-          component={PlacesList}
+          name="HomeScreen"
+          component={HomeScreen}
           options={{ title: 'Places List',headerTitleAlign: 'center', }}
         />
         <Stack.Screen
