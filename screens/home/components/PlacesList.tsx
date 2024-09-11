@@ -36,6 +36,7 @@ const PlacesList: React.FC = () => {
         data={places}
         keyExtractor={(item) => item.id.toString()}
         renderItem={renderItem}
+        scrollEnabled={false}
         ListEmptyComponent={<Text>No places available.</Text>}
     />
   );
